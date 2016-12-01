@@ -1,7 +1,0 @@
-name: Scheduler
-version: v0.1.0-dev
-category: Framework
-description: A resource based scheduler plugin for Rancher.
-projectURL: https://github.com/rancher/scheduler
-labels:
-  io.rancher.certified: rancher
