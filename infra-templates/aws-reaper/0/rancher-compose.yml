@@ -1,7 +1,7 @@
 .catalog:
   name: ELB Classic Load Balancer
   version: "v0.1"
-  description: "Clean up terminated AWS hosts
+  description: "Clean up terminated AWS hosts"
     - variable: "AWS_ACCESS_KEY_ID"
       label: "AWS Access Key ID"
       description: "Access key ID for your AWS account (Will use EC2 Role if unset)"
