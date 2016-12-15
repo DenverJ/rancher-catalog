@@ -2,6 +2,7 @@
   name: AWS Instance Reaper
   version: "v0.1"
   description: "Clean up terminated AWS hosts"
+  questions:
     - variable: "AWS_ACCESS_KEY_ID"
       label: "AWS Access Key ID"
       description: "Access key ID for your AWS account (Will use EC2 Role if unset)"
