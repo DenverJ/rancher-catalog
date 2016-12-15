@@ -1,5 +1,5 @@
 .catalog:
-  name: ELB Classic Load Balancer
+  name: AWS Instance Reaper
   version: "v0.1"
   description: "Clean up terminated AWS hosts"
     - variable: "AWS_ACCESS_KEY_ID"

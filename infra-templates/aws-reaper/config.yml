@@ -2,3 +2,4 @@ name: AWS Instance Reaper
 description: |
   Clean up terminated AWS hosts
 version: v0.1
+category: AWS
