@@ -1,4 +1,4 @@
-name: Cattle
+name: Custom
 description: Default Cattle template
 stacks:
   - name: network-services
