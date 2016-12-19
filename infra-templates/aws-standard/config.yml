@@ -1,0 +1,5 @@
+name: Standard Cloud Hosting infrastructure
+description: |
+  Base components to help things work standard and awesome.
+version: v0.1
+category: Platform

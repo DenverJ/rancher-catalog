@@ -1,0 +1,50 @@
+.catalog:
+  name: Standard Cloud Hosting infrastructure
+  version: "v0.1"
+  description: "Base components to help things work standard and awesome."
+  questions:
+    - variable: "AWS_ACCESS_KEY_ID"
+      label: "AWS Access Key ID"
+      description: "Access key ID for your AWS account (Will use EC2 Role if unset)"
+      type: "string"
+      required: false
+    - variable: "AWS_SECRET_ACCESS_KEY"
+      label: "AWS Secret Access Key"
+      description: "Secret access key for your AWS account (Will use EC2 Role if unset)"
+      type: "string"
+      required: false
+    - variable: "ELBV1_AWS_REGION"
+      label: "AWS Region (Optional)"
+      description: "The region for load balancers and EC2 instances in this Rancher environment. Defaults to the region of the instance the service will be running on."
+      type: "string"
+      required: false
+    - variable: "ELBV1_AWS_VPCID"
+      label: "AWS VPC ID (Optional)"
+      description: "The VPC for the load balancers and EC2 instances in this Rancher environment. Defaults to the VPC of the instance the service will be running on."
+      type: "string"
+      required: false
+    - variable: "ELBV1_USE_PRIVATE_IP"
+      label: "EC2 Private IP Lookup"
+      description: "If your EC2 instances are registered in Rancher with their private IP addresses, then this must be set to true."
+      required: true
+      type: "boolean"
+      default: false
+      
+aws-reaper:
+  scale: 1
+  health_check:
+    port: 3000
+    interval: 2000
+    unhealthy_threshold: 3
+    strategy: recreate
+    response_timeout: 2000
+    request_line: GET / HTTP/1.0
+    healthy_threshold: 2
+elbv1:
+  health_check:
+    port: 1000
+    interval: 5000
+    unhealthy_threshold: 2
+    request_line: GET / HTTP/1.0
+    healthy_threshold: 2
+    response_timeout: 2000
